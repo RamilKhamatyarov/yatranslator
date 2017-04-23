@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">YaTranslator</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="enter_text">Enter</string>
+    <string name="translate">Translate</string>
+    <string name="font_secondary_bold">Font bold</string>
+</resources>
