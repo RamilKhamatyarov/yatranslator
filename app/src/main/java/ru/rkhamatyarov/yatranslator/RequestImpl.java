@@ -37,7 +37,7 @@ public class RequestImpl {
 
 
     public void getRequest(String langDirs, String wordsLine, final RequestOptions option, final VolleyCallback callback) throws WrongOptionException {
-        Log.d("RequestImpl", " getRequest");
+        Log.d("RequestImpl", langDirs);
         // Get layout
 //        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 //        View view = inflater.inflate(R.layout.activity_main, null);
@@ -51,8 +51,8 @@ public class RequestImpl {
 
 
         if (option.equals(RequestOptions.langList)) {
-            Log.d("langDirs : ", langDirs.substring(0, 2));
-            request = getLangListReq(langDirs.substring(0, 2));
+            Log.d("langDirs : ", langDirs);
+            request = getLangListReq(langDirs);
         } else if (option.equals(RequestOptions.translateWords)) {
             request = getTranslateWords(langDirs, wordsLine);
         } else throw new WrongOptionException();
