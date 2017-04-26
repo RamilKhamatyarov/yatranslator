@@ -16,15 +16,22 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical|center_horizontal"
         android:background="@color/colorPrimary"
-        android:text="English"
+        android:text="@string/eng_lang"
         />
+    <Button
+        android:id="@+id/changeLang"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:background="@drawable/ic_two_arrows"
+        android:showAsAction="ifRoom"/>
     <Button
         android:id="@+id/langTo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical|center_horizontal"
         android:background="@color/colorPrimary"
-        android:text="Русский"
+        android:text="@string/rus_lang"
         />
 
 </android.support.v7.widget.Toolbar>

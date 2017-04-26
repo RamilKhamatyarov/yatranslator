@@ -6,4 +6,6 @@
     <string name="enter_text">Enter</string>
     <string name="translate">Translate</string>
     <string name="font_secondary_bold">Font bold</string>
+    <string name="rus_lang">Русский</string>
+    <string name="eng_lang">English</string>
 </resources>

@@ -8,9 +8,9 @@
     android:orientation="vertical"
     android:theme="@style/AppTheme"
     tools:context="ru.rkhamatyarov.yatranslator.MainActivity">
-    <!--<include layout="@layout/toolbar" />-->
+    <!--<include layout="@layout/toolbar_main" />-->
     <include
-        layout="@layout/toolbar"
+        layout="@layout/toolbar_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
@@ -20,7 +20,7 @@
         android:layout_height="0dp"
         android:layout_weight="1">
 
-        <LinearLayout
+        <RelativeLayout
             android:id="@+id/message"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -28,37 +28,65 @@
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginRight="@dimen/activity_horizontal_margin"
             android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:weightSum="0.5">
             <!--android:text="@string/title_home"-->
 
             <EditText
                 android:id="@+id/edittext"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="fill_parent"
                 android:gravity="top|left"
-                android:inputType="textMultiLine"
+                android:inputType="textMultiLine|textNoSuggestions"
                 android:lines="8"
                 android:maxLines="10"
                 android:minLines="6"
                 android:scrollbars="vertical"
-                android:text="@string/enter_text" />
+                android:text="@string/enter_text"></EditText>
 
-            <Button
-                android:id="@+id/button"
+            <ImageButton
+                android:id="@+id/clearEdittext"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
-                android:gravity="center"
-                android:text="@string/translate" />
+                android:paddingBottom="20dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:src="@drawable/abs__ic_clear_holo_light"
+                android:text="Clear" />
 
-            <TextView
-                android:id="@+id/translated_words"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:gravity="left" />
-        </LinearLayout>
+
+        </RelativeLayout>
 
     </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/translated_words"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:gravity="left"/>
+
+        <ImageButton
+            android:id="@+id/favoritesBtn"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_favorites"
+            android:background="@android:color/transparent"
+            android:text="Favorites"
+            android:layout_weight="1" />
+    </RelativeLayout>
+
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"

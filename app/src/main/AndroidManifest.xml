@@ -19,6 +19,7 @@
             </intent-filter>
         </activity>
         <activity android:name="ru.rkhamatyarov.yatranslator.LanguageListActivity" />
+        <activity android:name="ru.rkhamatyarov.yatranslator.FavoriteActivity" />
     </application>
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
